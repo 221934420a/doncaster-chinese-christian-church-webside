@@ -40,7 +40,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className={styles.iframeContainer}>
+      <div className={styles.cardContainer}>
         <div className={styles.card}>
           <h1 className={styles.mainTitle}>教會行事曆</h1>
           <iframe
@@ -52,7 +52,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className={styles.iframeContainer}>
+      <div className={styles.cardContainer}>
       <div className={styles.card}>
         <h2 className={styles.mainTitle}>教會地址</h2>
         <iframe
