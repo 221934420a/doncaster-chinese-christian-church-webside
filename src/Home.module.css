@@ -1,0 +1,80 @@
+/* Home.module.css */
+.flexContainer {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.iframeContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px; 
+  padding: 0; 
+  overflow: hidden; 
+}
+
+.iframe {
+  width: 100%;
+  max-width: 80%;
+  height: 600px;
+  border: 0;
+}
+
+.sectionTitle {
+  /* 新增的樣式 */
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.mainTitle {
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.iframe {
+  width: 780px;
+  height: 450px;
+  border: 0;
+}
+
+.cardContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  padding: 20px; /* Adjust padding as needed */
+}
+
+.cardTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.cardContent {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.cardSubtext {
+  font-size: 0.875rem;
+  color: #888888;
+}

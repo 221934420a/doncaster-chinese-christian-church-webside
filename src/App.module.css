@@ -1,0 +1,26 @@
+.content {
+  flex: 1; 
+  padding-top: var(--nav-height, 0); 
+  flex-grow: 1;
+}
+
+.background {
+  background-image: url('image/IMG_8747.jpg');
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; 
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; 
+  
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.footer {
+  margin-top: auto; 
+}

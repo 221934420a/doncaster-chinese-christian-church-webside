@@ -1,0 +1,53 @@
+/* TopNav.module.css */
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: var(--text-color, #343a40);
+  padding: 1rem;
+  transition: backdrop-filter 0.3s, background-color 0.3s;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+.navbar-top,
+.navbar-bottom {
+  height: 40px; /* 確保 TopNav 內部每個部分的高度，使總高度為 80px */
+}
+
+.navbar.scrolled {
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.navbar-logo {
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.25rem;
+  line-height: 40px; /* 確保文字在 40px 高度的區域內居中對齊 */
+}
+
+.navbar-items {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 1rem;
+  align-items: center;
+  height: 40px; /* 保持高度與上方一致 */
+}
+
+.navbar-link {
+  text-decoration: none;
+  color: inherit;
+  font-size: 1rem;
+}
+
+.navbar-link:hover {
+  text-decoration: underline;
+}
