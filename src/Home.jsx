@@ -1,6 +1,6 @@
-// src/Home.js
 import React from "react";
 import styles from './Home.module.css';
+import LatestYouTubeVideo from "./YoutubePlayer/LatestYouTubeVideo.jsx";
 
 export default function Home() {
   // 假設崇拜時間是每週日的上午11點
@@ -53,15 +53,24 @@ export default function Home() {
       </div>
 
       <div className={styles.cardContainer}>
-      <div className={styles.card}>
-        <h2 className={styles.mainTitle}>教會地址</h2>
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d483.9562034645867!2d-1.158906417564138!3d53.50643775249466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48790d2634a9c6ab%3A0x8270617b8ee1e2c6!2zRG9uY2FzdGVyIENoaW5lc2UgQ2hyaXN0aWFuIENodXJjaCDnlbbljaHlo6vpgZToj6_kurrln7rnnaPmlZnmnIM!5e0!3m2!1szh-TW!2suk"
-          className={styles.iframe}
-          allowFullScreen=""
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-        ></iframe>
+        <div className={styles.card}>
+          <h2 className={styles.mainTitle}>教會地址</h2>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d483.9562034645867!2d-1.158906417564138!3d53.50643775249466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48790d2634a9c6ab%3A0x8270617b8ee1e2c6!2zRG9uY2FzdGVyIENoaW5lc2UgQ2hyaXN0aWFuIENodXJjaCDnlbbljaHlo6vpgZToj6_kurrln7rnnaPmlZnmnIM!5e0!3m2!1szh-TW!2suk"
+            className={styles.iframe}
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+      <div className={styles.cardContainer}>
+        <div className={styles.card}>
+          <h2 className={styles.mainTitle}>最新講道</h2>
+          <LatestYouTubeVideo
+            channelId={import.meta.env.VITE_YOUTUBE_CHANNEL_ID}
+            apiKey={import.meta.env.VITE_YOUTUBE_API_KEY}
+          />
         </div>
       </div>
     </>
