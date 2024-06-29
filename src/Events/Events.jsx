@@ -1,20 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ActionAreaCard from './ActionAreaCard';
-import styles from './Events.module.css'; // 創建並導入 CSS 模塊
- import logo from "./img/20240708_chi.jpg";
+import styles from './Events.module.css';
 
 export default function Events() {
+  const [fullscreenImage, setFullscreenImage] = useState(null);
+
   const meetings = [
     {
-      image: logo,
+      image: "./Event Photo/20240708_chi.jpg",
       title: '成為更強壯的天國門徒',
-      description: '講員:西緬牧師(英語教導,粵語翻譯)',
+      description: '講員: 西緬牧師 (英語教導, 粵語翻譯)',
     },
-    // {
-    //   image: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEin3BzDCV6vXJ_FZEmbXJ1Ac-Ehv1NZYSRh324Wd2bkFlA6JHWTLJUSgK_e_yZ1OHluHAVK94MZ5IA7CM2qxR4UuSVQVAFwnA34Z5M_wfDOz0PkiuO9DlFYqxFRiQ7MMDQWK37wRWFHxZcY/s800/building_chapel.png',
-    //   title: '一般聚會',
-    //   description: '我們的定期聚會包括敬拜和教導，歡迎所有人參加。',
-    // },
     {
       image: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhO0krZ2m6xqZjmtmlrm5YvC0535a8prusr9qVsNhsJgzr4E2936CDy_pPUYqhYwy1MlWHX3FU_V3znSlEouvTBrFlkYfepgVRserlV-ewTPUrpQAIXcs3wUpFuW21t0OeUmTWiU_F66Rr5/s800/music_gassyou_kids_world.png',
       title: '兒童聚會',
@@ -27,16 +23,35 @@ export default function Events() {
     },
   ];
 
+  const openFullscreenImage = (image) => {
+    setFullscreenImage(image);
+  };
+
+  const closeFullscreenImage = () => {
+    setFullscreenImage(null);
+  };
+
   return (
     <div className={styles.eventsContainer}>
       {meetings.map((meeting, index) => (
-        <ActionAreaCard
-          key={index}
-          image={meeting.image}
-          title={meeting.title}
-          description={meeting.description}
-        />
+        <div key={index} onClick={() => openFullscreenImage(meeting.image)}>
+          <ActionAreaCard
+            image={meeting.image}
+            title={meeting.title}
+            description={meeting.description}
+          />
+        </div>
       ))}
+
+      {fullscreenImage && (
+        <div className={styles.overlay} onClick={closeFullscreenImage}>
+          <img
+            src={fullscreenImage}
+            alt="Enlarged Photo"
+            className={styles.enlargedPhotoFullScreen}
+          />
+        </div>
+      )}
     </div>
   );
 }

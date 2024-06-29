@@ -38,6 +38,9 @@ export default function TopNav() {
           <li className={styles['navbar-item']}>
             <a href="/about" className={styles['navbar-link']}>關於我們</a>
           </li>
+          <li className={styles['navbar-item']}>
+            <a href="/album" className={styles['navbar-link']}>圖片集</a>
+          </li>
         </ul>
       </div>
     </nav>

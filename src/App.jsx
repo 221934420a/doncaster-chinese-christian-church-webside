@@ -5,6 +5,7 @@ import Home from './Home';
 import TopNav from './TopNav';
 import Events from './Events/Events';
 import Footer from './Footer';
+import Album from './Album';
 import styles from './App.module.css'; // 導入 CSS 模塊
 
 
@@ -37,6 +38,7 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<div>About</div>} />
             <Route path="/events" element={<Events />} />
+            <Route path="/album" element={<Album />} />
           </Routes>
         </Router>
         </div>

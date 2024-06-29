@@ -16,13 +16,17 @@ export default function TopNav() {
         </NavbarItem>
         <NavbarItem>
           <Link className="text-text" href="./events">
-          {/* aria-current="page" */}
             活動
           </Link>
         </NavbarItem>
         <NavbarItem>
           <Link className="text-text" href="./about">
             關於我們
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Link className="text-text" href="./album">
+            圖片集
           </Link>
         </NavbarItem>
       </NavbarContent>
