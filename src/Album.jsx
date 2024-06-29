@@ -7,7 +7,7 @@ export default function Album() {
       id: 1,
       title: '假期照片',
       photos: [
-        'https://lh3.googleusercontent.com/pw/AP1GczO7RNLW87jC2xH3XKvp0hvIVhxW1M8QnyIYqDeAhqZoJmngNlth6HYzoW2cBc7WybHGwtKr_UHw8ayXFParJp6Nk7e8qI-3S2J80k-E15TkKMqdW1TogaK73l9m2BuhRzyOJOs73co8gf2_glsUDgdwnw=w1216-h911-s-no-gm?authuser=0',
+        'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj0l1AIQbs7P8OOitY56-7d2Ezc6fE2_TICruZfK_iWOLbNJw1up_wpNzE8-0GBatGMEgDTmkCYruOqLkuOk3BII_ei1V6P5yLIhHAvQhVfIG4h1E_6_rfW2zPdeST7h9kcriIYhkYhyZBN/s783/sports_referee_var_check.png',
         './image/Logo.jpg',
         'https://source.unsplash.com/random/800x600?forest',
       ]
