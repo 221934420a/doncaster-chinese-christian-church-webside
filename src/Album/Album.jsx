@@ -5,7 +5,7 @@ export default function Album() {
   const albumsData = [
     {
       id: 1,
-      title: '假期照片',
+      title: '洗禮',
       photos: [
         'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj0l1AIQbs7P8OOitY56-7d2Ezc6fE2_TICruZfK_iWOLbNJw1up_wpNzE8-0GBatGMEgDTmkCYruOqLkuOk3BII_ei1V6P5yLIhHAvQhVfIG4h1E_6_rfW2zPdeST7h9kcriIYhkYhyZBN/s783/sports_referee_var_check.png',
         './image/Logo.jpg',
@@ -14,7 +14,7 @@ export default function Album() {
     },
     {
       id: 2,
-      title: '家庭聚會',
+      title: '父親節',
       photos: [
         'https://source.unsplash.com/random/800x600?family',
         'https://source.unsplash.com/random/800x600?dinner',

@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { NextUIProvider } from '@nextui-org/react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './Home';
-import TopNav from './TopNav';
+import Home from './Home/Home';
+import TopNav from './TopNav/TopNav';
 import Events from './Events/Events';
-import Footer from './Footer';
-import Album from './Album';
+import Footer from './Footer/Footer';
+import Album from './Album/Album.jsx';
 import styles from './App.module.css'; // 導入 CSS 模塊
 
 

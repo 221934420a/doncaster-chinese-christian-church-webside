@@ -1,6 +1,6 @@
 import React from "react";
 import styles from './Home.module.css';
-import LatestYouTubeVideo from "./YoutubePlayer/LatestYouTubeVideo.jsx";
+import LatestYouTubeVideo from "../YoutubePlayer/LatestYouTubeVideo.jsx";
 
 export default function Home() {
   // 假設崇拜時間是每週日的上午11點
