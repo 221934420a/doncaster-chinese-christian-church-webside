@@ -1,8 +1,20 @@
 import React, { useEffect, useState } from 'react';
-import styles from './TopNav.module.css'; 
+import styles from './TopNav.module.css';
+import { useTranslation } from 'react-i18next'; 
 
 export default function TopNav() {
   const [isScrolled, setIsScrolled] = useState(false);
+
+  const { t, i18n } = useTranslation();
+
+  // const changeLanguage = (language) => {
+  //   i18n.changeLanguage(language);
+  // };
+
+  const toggleLanguage = () => {
+    const newLanguage = i18n.language === 'en' ? 'zh_tc' : 'en';
+    i18n.changeLanguage(newLanguage);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -33,14 +45,15 @@ export default function TopNav() {
             <a href="/" className={styles['navbar-link']}>Home</a>
           </li>
           <li className={styles['navbar-item']}>
-            <a href="/events" className={styles['navbar-link']}>活動</a>
+            <a href="/events" className={styles['navbar-link']}>{t('event')}</a>
           </li>
           <li className={styles['navbar-item']}>
-            <a href="/about" className={styles['navbar-link']}>關於我們</a>
+            <a href="/about" className={styles['navbar-link']}>{t('about')}</a>
           </li>
           <li className={styles['navbar-item']}>
-            <a href="/album" className={styles['navbar-link']}>圖片集</a>
+            <a href="/album" className={styles['navbar-link']}>{t('album')}</a>
           </li>
+          <button onClick={toggleLanguage}>{i18n.language === 'en' ? '中文' : 'English'}</button>
         </ul>
       </div>
     </nav>
